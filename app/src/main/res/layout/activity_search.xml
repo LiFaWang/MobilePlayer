@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+   <LinearLayout
+       android:gravity="center_vertical"
+       android:background="#ff3097fd"
+       android:layout_width="match_parent"
+       android:layout_height="50dp">
+       <EditText
+           android:layout_weight="1"
+           android:layout_marginLeft="5dp"
+           android:drawablePadding="3dp"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:hint="全网搜索"
+           android:textColor="@drawable/tv_search_textcolor_selector"
+           android:clickable="true"
+           android:textSize="14sp"
+           android:id="@+id/et_input"
+           android:drawableLeft="@drawable/tv_search_drawable_selector"
+           android:background="@drawable/tv_search_bg_selector"/>
+       <ImageView
+           android:layout_marginLeft="5dp"
+           android:id="@+id/iv_voice"
+           android:src="@drawable/voice_empty"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"/>
+       <TextView
+           android:text="搜索"
+           android:layout_marginLeft="5dp"
+           android:layout_marginRight="8dp"
+           android:id="@+id/tv_search"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"/>
+
+   </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+            <ProgressBar
+                android:layout_centerInParent="true"
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_centerInParent="true"
+                android:id="@+id/tv_noData"
+                android:text="没有您要的内容哦"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>
