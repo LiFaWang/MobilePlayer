@@ -11,6 +11,7 @@ import com.iflytek.ise.result.util.ResultFormatUtil;
  * <p>Company: www.iflytek.com</p>
  * @author iflytek
  * @date 2015年1月12日 下午5:03:14
+ * kkkk
  */
 public class ReadSyllableResult extends Result {
 	
