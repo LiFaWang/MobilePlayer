@@ -1,18 +1,18 @@
 [
     {
-        "merged": "C:\\Users\\Administrator\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\build\\intermediates\\res\\merged\\debug\\drawable\\setting.png",
-        "source": "C:\\Users\\Administrator\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\drawable\\setting.png"
+        "merged": "C:\\Users\\hasee\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\build\\intermediates\\res\\merged\\debug\\drawable\\setting.png",
+        "source": "C:\\Users\\hasee\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\drawable\\setting.png"
     },
     {
-        "merged": "C:\\Users\\Administrator\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\build\\intermediates\\res\\merged\\debug\\drawable\\main_setting_btn_np.xml",
-        "source": "C:\\Users\\Administrator\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\drawable\\main_setting_btn_np.xml"
+        "merged": "C:\\Users\\hasee\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\build\\intermediates\\res\\merged\\debug\\drawable\\setting_p.png",
+        "source": "C:\\Users\\hasee\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\drawable\\setting_p.png"
     },
     {
-        "merged": "C:\\Users\\Administrator\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\build\\intermediates\\res\\merged\\debug\\drawable\\setting_p.png",
-        "source": "C:\\Users\\Administrator\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\drawable\\setting_p.png"
+        "merged": "C:\\Users\\hasee\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\build\\intermediates\\res\\merged\\debug\\drawable\\list_bg_color.xml",
+        "source": "C:\\Users\\hasee\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\drawable\\list_bg_color.xml"
     },
     {
-        "merged": "C:\\Users\\Administrator\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\build\\intermediates\\res\\merged\\debug\\drawable\\list_bg_color.xml",
-        "source": "C:\\Users\\Administrator\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\drawable\\list_bg_color.xml"
+        "merged": "C:\\Users\\hasee\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\build\\intermediates\\res\\merged\\debug\\drawable\\main_setting_btn_np.xml",
+        "source": "C:\\Users\\hasee\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\drawable\\main_setting_btn_np.xml"
     }
 ]

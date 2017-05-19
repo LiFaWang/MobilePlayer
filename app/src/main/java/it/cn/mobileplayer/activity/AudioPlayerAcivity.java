@@ -1,9 +1,11 @@
 package it.cn.mobileplayer.activity;
 
 import android.app.Activity;
+import android.content.BroadcastReceiver;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.ServiceConnection;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
@@ -18,10 +20,6 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import org.greenrobot.eventbus.EventBus;
-import org.greenrobot.eventbus.Subscribe;
-import org.greenrobot.eventbus.ThreadMode;
-
 import java.io.File;
 
 import it.cn.mobileplayer.IMyMusicPlayerService;
@@ -34,6 +32,7 @@ import it.cn.mobileplayer.view.ShowLyricView;
 
 
 /**
+ *
  * Created by Administrator on 2016/12/22.
  */
 
@@ -57,7 +56,7 @@ public class AudioPlayerAcivity extends Activity implements View.OnClickListener
     private Button btnAudioNext;
     private Button btnLyrc;
     private ShowLyricView showLyricView;
-//    private MyReceiver mReceiver;
+    private MyReceiver mReceiver;
     private Utils mUtils;
     private boolean notification;
     private  AnimationDrawable animationDrawable;
@@ -307,13 +306,13 @@ public class AudioPlayerAcivity extends Activity implements View.OnClickListener
 
     private void initData() {
         mUtils=new Utils();
-        //注册广播
-//        mReceiver=new MyReceiver();
-//        IntentFilter intentFilter=new IntentFilter();
-//        intentFilter.addAction(MusicPlayerService.OPENAUDIO);
-//        registerReceiver(mReceiver, intentFilter);
-        //1、EventBus注册
-        EventBus.getDefault().register(this);
+//        注册广播
+        mReceiver=new MyReceiver();
+        IntentFilter intentFilter=new IntentFilter();
+        intentFilter.addAction(MusicPlayerService.OPENAUDIO);
+        registerReceiver(mReceiver, intentFilter);
+//        //1、EventBus注册
+//        EventBus.getDefault().register(this);
 
     }
 
@@ -361,30 +360,36 @@ public class AudioPlayerAcivity extends Activity implements View.OnClickListener
             }
         }
     };
-//    class MyReceiver extends BroadcastReceiver{
-//
-//        @Override
-//        public void onReceive(Context context, Intent intent) {
-//
-//            showData(null);
-//        }
-//    }
-    //3、订阅方法
-    @Subscribe(threadMode = ThreadMode.MAIN,sticky = false,priority = 0)
-    public void showData(MediaItem mediaItem) {
-//        发消息开始歌词同步
-        mHandler.sendEmptyMessage(SHOW_LYRIC);
-        showLyric();
-        showViewData();
-        checkPlaymode();
-    }
+    class MyReceiver extends BroadcastReceiver {
 
-//    public void onEventMainThread(MediaItem mediaItem){
-//        发消息开始歌词同步
+        @Override
+        public void onReceive(Context context, Intent intent) {
+
+//            showData(null);
+        }
+    }
+    //3、订阅方法
+
+//    public void showData(MediaItem mediaItem) {
+////        发消息开始歌词同步
 //        showLyric();
 //        showViewData();
 //        checkPlaymode();
 //    }
+    public void onEventMainThread(MediaItem mediaItem) {
+        showLyric();
+        showViewData();
+        checkPlaymode();
+    }
+//    @Subscribe(threadMode = ThreadMode.MAIN,sticky = false,priority = 0)
+//    public void onEventMainThread(MediaItem mediaItem){
+////        发消息开始歌词同步
+//
+//        showLyric();
+//        showViewData();
+//        checkPlaymode();
+//    }
+
 
     private void showLyric() {
         //解析歌词
@@ -447,13 +452,13 @@ public class AudioPlayerAcivity extends Activity implements View.OnClickListener
     @Override
     protected void onDestroy() {
         mHandler.removeCallbacksAndMessages(null);
-        //取消注册广播
-//        if(mReceiver!=null){
-//            unregisterReceiver(mReceiver);
-//            mReceiver=null;
-//        }
-        //2、EvenBus取消注册
-        EventBus.getDefault().unregister(this);
+//        取消注册广播
+        if(mReceiver!=null){
+            unregisterReceiver(mReceiver);
+            mReceiver=null;
+        }
+//        //2、EvenBus取消注册
+//        EventBus.getDefault().unregister(this);
 
         //解绑服务
         if(conn!=null){

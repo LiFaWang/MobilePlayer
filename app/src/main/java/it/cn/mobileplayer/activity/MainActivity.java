@@ -1,5 +1,8 @@
 package it.cn.mobileplayer.activity;
 
+import android.Manifest;
+import android.annotation.SuppressLint;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.FragmentActivity;
@@ -35,14 +38,67 @@ public  class MainActivity extends FragmentActivity {
         rg_bottom_tag= (RadioGroup) findViewById(R.id.rg_bottom_tag);
 
 
-        mBasePagers = new ArrayList<>();
-        mBasePagers.add(new VideoPager(this));
-        mBasePagers.add(new AudioPager(this));
-        mBasePagers.add(new NetVideoPager(this));
-        mBasePagers.add(new NetAudioPager(this));
+
         //设置RadioGroup监听
         rg_bottom_tag.setOnCheckedChangeListener(new MyCheckedChangeListener());
         rg_bottom_tag.check(R.id.rb_video);
+    }
+
+    @SuppressLint("NewApi")
+    private void requestReadExternalPermission() {
+        if (checkSelfPermission(Manifest.permission.READ_EXTERNAL_STORAGE)
+                != PackageManager.PERMISSION_GRANTED) {
+//            Log.d(TAG, "READ permission IS NOT granted...");
+
+            if (shouldShowRequestPermissionRationale(Manifest.permission.READ_EXTERNAL_STORAGE)) {
+
+//                Log.d(TAG, "11111111111111");
+            } else {
+                // 0 是自己定义的请求coude
+                requestPermissions(new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, 0);
+//                Log.d(TAG, "222222222222");
+            }
+        } else {
+            mBasePagers = new ArrayList<>();
+            mBasePagers.add(new VideoPager(this));
+            mBasePagers.add(new AudioPager(this));
+            mBasePagers.add(new NetVideoPager(this));
+            mBasePagers.add(new NetAudioPager(this));
+        }
+    }
+
+
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
+//        Log.d(TAG, "requestCode=" + requestCode + "; --->" + permissions.toString()
+//                + "; grantResult=" + grantResults.toString());
+        switch (requestCode) {
+            case 0: {
+
+                if (grantResults.length > 0
+                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+
+                    // permission was granted
+                    // request successfully, handle you transactions
+                    mBasePagers = new ArrayList<>();
+                    mBasePagers.add(new VideoPager(this));
+                    mBasePagers.add(new AudioPager(this));
+                    mBasePagers.add(new NetVideoPager(this));
+                    mBasePagers.add(new NetAudioPager(this));
+
+                } else {
+
+                    // permission denied
+                    // request failed
+                }
+
+                return;
+            }
+            default:
+                break;
+
+        }
     }
  class MyCheckedChangeListener implements RadioGroup.OnCheckedChangeListener{
 
@@ -65,7 +121,6 @@ public  class MainActivity extends FragmentActivity {
         }
     }
 
-
     private  void setFragment() {
         FragmentManager supportFragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = supportFragmentManager.beginTransaction();
@@ -74,7 +129,10 @@ public  class MainActivity extends FragmentActivity {
     }
 
     public BasePager getBasePager() {
-        BasePager basePager=mBasePagers.get(position);
+        requestReadExternalPermission();
+        BasePager basePager = null;
+        if (mBasePagers != null && mBasePagers.size()!=0)
+            basePager=mBasePagers.get(position);
         if (basePager!=null&&!basePager.isInitData){
             basePager.initData();
             basePager.isInitData=true;

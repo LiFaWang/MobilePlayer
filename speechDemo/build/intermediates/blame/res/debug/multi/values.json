@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "C:\\Users\\Administrator\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+        "outputFile": "C:\\Users\\hasee\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
         "map": [
             {
                 "to": {
@@ -12,7 +12,7 @@
                     "endOffset": 185
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\strings.xml",
+                    "file": "C:\\Users\\hasee\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 125,
                         "startColumn": 4,
@@ -33,7 +33,7 @@
                     "endOffset": 348
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\strings.xml",
+                    "file": "C:\\Users\\hasee\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 130,
                         "startColumn": 4,
@@ -54,7 +54,7 @@
                     "endOffset": 454
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\strings.xml",
+                    "file": "C:\\Users\\hasee\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 148,
                         "startColumn": 4,
@@ -75,7 +75,7 @@
                     "endOffset": 609
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\strings.xml",
+                    "file": "C:\\Users\\hasee\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 71,
                         "startColumn": 5,
@@ -96,7 +96,7 @@
                     "endOffset": 775
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\strings.xml",
+                    "file": "C:\\Users\\hasee\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 77,
                         "startColumn": 4,
@@ -117,7 +117,7 @@
                     "endOffset": 888
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\strings.xml",
+                    "file": "C:\\Users\\hasee\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 23,
                         "startColumn": 4,
@@ -138,7 +138,7 @@
                     "endOffset": 1002
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\strings.xml",
+                    "file": "C:\\Users\\hasee\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 27,
                         "startColumn": 4,
@@ -159,7 +159,7 @@
                     "endOffset": 1117
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\strings.xml",
+                    "file": "C:\\Users\\hasee\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 117,
                         "startColumn": 4,
@@ -180,7 +180,7 @@
                     "endOffset": 1237
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\strings.xml",
+                    "file": "C:\\Users\\hasee\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 121,
                         "startColumn": 4,
@@ -201,7 +201,7 @@
                     "endOffset": 1373
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\strings.xml",
+                    "file": "C:\\Users\\hasee\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 101,
                         "startColumn": 4,
@@ -222,7 +222,7 @@
                     "endOffset": 1523
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\strings.xml",
+                    "file": "C:\\Users\\hasee\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 106,
                         "startColumn": 4,
@@ -243,7 +243,7 @@
                     "endOffset": 1632
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\strings.xml",
+                    "file": "C:\\Users\\hasee\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 140,
                         "startColumn": 4,
@@ -264,7 +264,7 @@
                     "endOffset": 1736
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\strings.xml",
+                    "file": "C:\\Users\\hasee\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 144,
                         "startColumn": 4,
@@ -285,7 +285,7 @@
                     "endOffset": 1860
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\strings.xml",
+                    "file": "C:\\Users\\hasee\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 135,
                         "startColumn": 4,
@@ -306,7 +306,7 @@
                     "endOffset": 2065
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\strings.xml",
+                    "file": "C:\\Users\\hasee\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 83,
                         "startColumn": 4,
@@ -327,7 +327,7 @@
                     "endOffset": 2263
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\strings.xml",
+                    "file": "C:\\Users\\hasee\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 91,
                         "startColumn": 4,
@@ -348,7 +348,7 @@
                     "endOffset": 2921
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\strings.xml",
+                    "file": "C:\\Users\\hasee\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 31,
                         "startColumn": 4,
@@ -369,7 +369,7 @@
                     "endOffset": 3500
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\strings.xml",
+                    "file": "C:\\Users\\hasee\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 51,
                         "startColumn": 4,
@@ -389,7 +389,7 @@
                     "endOffset": 3548
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\colors.xml",
+                    "file": "C:\\Users\\hasee\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\colors.xml",
                     "position": {
                         "startLine": 14,
                         "startColumn": 4,
@@ -408,7 +408,7 @@
                     "endOffset": 3603
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\colors.xml",
+                    "file": "C:\\Users\\hasee\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\colors.xml",
                     "position": {
                         "startLine": 12,
                         "startColumn": 4,
@@ -427,7 +427,7 @@
                     "endOffset": 3649
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\colors.xml",
+                    "file": "C:\\Users\\hasee\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\colors.xml",
                     "position": {
                         "startLine": 13,
                         "startColumn": 4,
@@ -446,7 +446,7 @@
                     "endOffset": 3689
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\colors.xml",
+                    "file": "C:\\Users\\hasee\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\colors.xml",
                     "position": {
                         "startLine": 9,
                         "startColumn": 4,
@@ -465,7 +465,7 @@
                     "endOffset": 3729
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\dimen.xml",
+                    "file": "C:\\Users\\hasee\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\dimen.xml",
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
@@ -484,7 +484,7 @@
                     "endOffset": 3771
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\dimen.xml",
+                    "file": "C:\\Users\\hasee\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\dimen.xml",
                     "position": {
                         "startLine": 9,
                         "startColumn": 4,
@@ -503,7 +503,7 @@
                     "endOffset": 3810
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\dimen.xml",
+                    "file": "C:\\Users\\hasee\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\dimen.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -522,7 +522,7 @@
                     "endOffset": 3848
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\dimen.xml",
+                    "file": "C:\\Users\\hasee\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\dimen.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -541,7 +541,7 @@
                     "endOffset": 3888
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\dimen.xml",
+                    "file": "C:\\Users\\hasee\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\dimen.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
@@ -560,7 +560,7 @@
                     "endOffset": 3945
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\colors.xml",
+                    "file": "C:\\Users\\hasee\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\colors.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -579,7 +579,7 @@
                     "endOffset": 4001
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\colors.xml",
+                    "file": "C:\\Users\\hasee\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\colors.xml",
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
@@ -598,7 +598,7 @@
                     "endOffset": 4045
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\strings.xml",
+                    "file": "C:\\Users\\hasee\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -617,7 +617,7 @@
                     "endOffset": 4089
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\strings.xml",
+                    "file": "C:\\Users\\hasee\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
@@ -636,7 +636,7 @@
                     "endOffset": 4210
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\strings.xml",
+                    "file": "C:\\Users\\hasee\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
@@ -655,7 +655,7 @@
                     "endOffset": 4265
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\strings.xml",
+                    "file": "C:\\Users\\hasee\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 18,
                         "startColumn": 4,
@@ -674,7 +674,7 @@
                     "endOffset": 4319
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\strings.xml",
+                    "file": "C:\\Users\\hasee\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 20,
                         "startColumn": 4,
@@ -693,7 +693,7 @@
                     "endOffset": 4374
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\strings.xml",
+                    "file": "C:\\Users\\hasee\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 19,
                         "startColumn": 4,
@@ -712,7 +712,7 @@
                     "endOffset": 4420
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\strings.xml",
+                    "file": "C:\\Users\\hasee\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 11,
                         "startColumn": 4,
@@ -731,7 +731,7 @@
                     "endOffset": 4478
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\strings.xml",
+                    "file": "C:\\Users\\hasee\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 12,
                         "startColumn": 4,
@@ -750,7 +750,7 @@
                     "endOffset": 4567
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\strings.xml",
+                    "file": "C:\\Users\\hasee\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 116,
                         "startColumn": 4,
@@ -769,7 +769,7 @@
                     "endOffset": 4620
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\strings.xml",
+                    "file": "C:\\Users\\hasee\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 114,
                         "startColumn": 4,
@@ -788,7 +788,7 @@
                     "endOffset": 4678
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\strings.xml",
+                    "file": "C:\\Users\\hasee\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 115,
                         "startColumn": 4,
@@ -807,7 +807,7 @@
                     "endOffset": 4733
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\strings.xml",
+                    "file": "C:\\Users\\hasee\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 17,
                         "startColumn": 4,
@@ -826,7 +826,7 @@
                     "endOffset": 4825
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\strings.xml",
+                    "file": "C:\\Users\\hasee\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 113,
                         "startColumn": 4,
@@ -845,7 +845,7 @@
                     "endOffset": 4898
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\strings.xml",
+                    "file": "C:\\Users\\hasee\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 112,
                         "startColumn": 4,
@@ -864,7 +864,7 @@
                     "endOffset": 5113
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\strings.xml",
+                    "file": "C:\\Users\\hasee\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 8,
                         "startColumn": 4,
@@ -883,7 +883,7 @@
                     "endOffset": 5270
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\strings.xml",
+                    "file": "C:\\Users\\hasee\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
@@ -902,7 +902,7 @@
                     "endOffset": 5685
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\strings.xml",
+                    "file": "C:\\Users\\hasee\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
@@ -921,7 +921,7 @@
                     "endOffset": 5851
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\strings.xml",
+                    "file": "C:\\Users\\hasee\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 9,
                         "startColumn": 4,
@@ -940,7 +940,7 @@
                     "endOffset": 5906
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\strings.xml",
+                    "file": "C:\\Users\\hasee\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 13,
                         "startColumn": 4,
@@ -959,7 +959,7 @@
                     "endOffset": 5959
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\strings.xml",
+                    "file": "C:\\Users\\hasee\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 15,
                         "startColumn": 4,
@@ -978,7 +978,7 @@
                     "endOffset": 6016
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\strings.xml",
+                    "file": "C:\\Users\\hasee\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 14,
                         "startColumn": 4,
@@ -997,7 +997,7 @@
                     "endOffset": 6076
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\strings.xml",
+                    "file": "C:\\Users\\hasee\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 16,
                         "startColumn": 4,
@@ -1016,7 +1016,7 @@
                     "endOffset": 6159
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\strings.xml",
+                    "file": "C:\\Users\\hasee\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 99,
                         "startColumn": 4,
@@ -1036,7 +1036,7 @@
                     "endOffset": 6688
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\styles.xml",
+                    "file": "C:\\Users\\hasee\\AndroidStudioProjects\\MobilePlayer\\speechDemo\\src\\main\\res\\values\\styles.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 6,

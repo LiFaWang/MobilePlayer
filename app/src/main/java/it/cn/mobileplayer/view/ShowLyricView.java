@@ -116,7 +116,6 @@ public class ShowLyricView extends android.support.v7.widget.AppCompatTextView {
                 plush=0;
             }else {
                 //平移
-                //
              //   float delta=((currentPsoition-timePiont)/sleepTime)*textHeight;
                 plush=textHeight+((currentPosition-timePoint)/sleepTime)*textHeight;
             }
