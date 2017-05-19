@@ -106,8 +106,8 @@
   <item name="android:windowIsFloating">true</item>
   <item name="android:windowIsTranslucent">true</item>
   <item name="android:windowNoTitle">true</item>
-  <item name="android:background">@android:color/transparent</item>
-  <item name="android:windowBackground">@android:color/transparent</item>
+  <item name="android:background">@android:color/primary_text_dark</item>
+  <item name="android:windowBackground">@android:color/primary_text_dark</item>
   <item name="android:backgroundDimEnabled">true</item>
   <item name="android:backgroundDimAmount">0.6</item>
  </style></file><file name="iat_setting" path="C:\Users\hasee\AndroidStudioProjects\MobilePlayer\speechDemo\src\main\res\xml\iat_setting.xml" qualifiers="" type="xml"/><file name="ise_settings" path="C:\Users\hasee\AndroidStudioProjects\MobilePlayer\speechDemo\src\main\res\xml\ise_settings.xml" qualifiers="" type="xml"/><file name="tts_setting" path="C:\Users\hasee\AndroidStudioProjects\MobilePlayer\speechDemo\src\main\res\xml\tts_setting.xml" qualifiers="" type="xml"/><file name="understand_setting" path="C:\Users\hasee\AndroidStudioProjects\MobilePlayer\speechDemo\src\main\res\xml\understand_setting.xml" qualifiers="" type="xml"/></source><source path="C:\Users\hasee\AndroidStudioProjects\MobilePlayer\speechDemo\build\generated\res\rs\debug"/><source path="C:\Users\hasee\AndroidStudioProjects\MobilePlayer\speechDemo\build\generated\res\resValues\debug"/></dataSet><dataSet config="debug" generated-set="debug$Generated"><source path="C:\Users\hasee\AndroidStudioProjects\MobilePlayer\speechDemo\src\debug\res"/></dataSet><mergedItems/></merger>
