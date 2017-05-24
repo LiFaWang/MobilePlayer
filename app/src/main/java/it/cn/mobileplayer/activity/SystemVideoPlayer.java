@@ -399,7 +399,6 @@ public class SystemVideoPlayer extends Activity implements View.OnClickListener 
     /*
     得到系统时间
     * */
-
     @TargetApi(Build.VERSION_CODES.N)
     private String getSystemTime() {
         SimpleDateFormat format = null;
@@ -476,7 +475,6 @@ public class SystemVideoPlayer extends Activity implements View.OnClickListener 
                 @Override
                 public boolean onDoubleTap(MotionEvent e) {
                     Toast.makeText(SystemVideoPlayer.this, "双击", Toast.LENGTH_SHORT).show();
-
                     setFullScreenAndDefault();
                     return super.onDoubleTap(e);
 
@@ -874,7 +872,7 @@ public class SystemVideoPlayer extends Activity implements View.OnClickListener 
                     //改变的音量=（滑动屏幕的距离：总距离）*音量最大值
                     float delta =(distanceY/touchRang)*maxVoice;
                     //最终声音=原来的+改变的声音
-                    int voice = (int) Math.min(Math.min(mVol+delta,0),maxVoice);
+                    int voice = (int) Math.min(Math.max(mVol+delta,0),maxVoice);
                     if(delta!=0){
                         isMute=false;
                         updataVoice(voice,isMute);

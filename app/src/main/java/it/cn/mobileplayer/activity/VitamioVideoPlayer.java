@@ -886,7 +886,7 @@ public class VitamioVideoPlayer extends Activity implements View.OnClickListener
                     //改变的音量=（滑动屏幕的距离：总距离）*音量最大值
                     float delta =(distanceY/touchRang)*maxVoice;
                     //最终声音=原来的+改变的声音
-                    int voice = (int) Math.min(Math.min(mVol+delta,0),maxVoice);
+                    int voice = (int) Math.min(Math.max(mVol+delta,0),maxVoice);
                     if(delta!=0){
                         isMute=false;
                         updataVoice(voice,isMute);
