@@ -59,7 +59,6 @@ public class AudioPlayerAcivity extends Activity implements View.OnClickListener
     private Button btnAudioNext;
     private Button btnLyrc;
     private ShowLyricView showLyricView;
-//    private ShowLyricView1 showLyricView;
     private MyReceiver mReceiver;
     private Utils mUtils;
     private boolean notification;
@@ -89,7 +88,6 @@ public class AudioPlayerAcivity extends Activity implements View.OnClickListener
         btnAudioNext = (Button) findViewById(R.id.btn_audio_next);
         btnLyrc = (Button) findViewById(R.id.btn_lyrc);
         showLyricView= (ShowLyricView) findViewById(R.id.showLyricView);
-//        showLyricView= (ShowLyricView1) findViewById(R.id.showLyricView);
 
         btnAudioPlaymode.setOnClickListener(this);
         btnAudioPre.setOnClickListener(this);
