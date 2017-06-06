@@ -219,7 +219,7 @@ public class LyricUtils {
             //1、把02:04.12按照:切割成02和04.12
             String[] s1 = strTime.split(":");
             //2、把04.12按照.切割成04和12
-            String[] s2 = strTime.split("\\.");
+            String[] s2 = s1[1].split("\\.");
             //1.分
             long min = Long.parseLong(s1[0]);
             //2、秒

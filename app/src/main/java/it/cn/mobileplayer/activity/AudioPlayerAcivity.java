@@ -5,7 +5,6 @@ import android.content.BroadcastReceiver;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
-import android.content.IntentFilter;
 import android.content.ServiceConnection;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
@@ -19,6 +18,10 @@ import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
 
 import java.io.File;
 
@@ -56,6 +59,7 @@ public class AudioPlayerAcivity extends Activity implements View.OnClickListener
     private Button btnAudioNext;
     private Button btnLyrc;
     private ShowLyricView showLyricView;
+//    private ShowLyricView1 showLyricView;
     private MyReceiver mReceiver;
     private Utils mUtils;
     private boolean notification;
@@ -85,6 +89,7 @@ public class AudioPlayerAcivity extends Activity implements View.OnClickListener
         btnAudioNext = (Button) findViewById(R.id.btn_audio_next);
         btnLyrc = (Button) findViewById(R.id.btn_lyrc);
         showLyricView= (ShowLyricView) findViewById(R.id.showLyricView);
+//        showLyricView= (ShowLyricView1) findViewById(R.id.showLyricView);
 
         btnAudioPlaymode.setOnClickListener(this);
         btnAudioPre.setOnClickListener(this);
@@ -307,12 +312,12 @@ public class AudioPlayerAcivity extends Activity implements View.OnClickListener
     private void initData() {
         mUtils=new Utils();
 //        注册广播
-        mReceiver=new MyReceiver();
-        IntentFilter intentFilter=new IntentFilter();
-        intentFilter.addAction(MusicPlayerService.OPENAUDIO);
-        registerReceiver(mReceiver, intentFilter);
-//        //1、EventBus注册
-//        EventBus.getDefault().register(this);
+//        mReceiver=new MyReceiver();
+//        IntentFilter intentFilter=new IntentFilter();
+//        intentFilter.addAction(MusicPlayerService.OPENAUDIO);
+//        registerReceiver(mReceiver, intentFilter);
+        //1、EventBus注册
+        EventBus.getDefault().register(this);
 
     }
 
@@ -365,30 +370,26 @@ public class AudioPlayerAcivity extends Activity implements View.OnClickListener
         @Override
         public void onReceive(Context context, Intent intent) {
 
-//            showData(null);
+            showData(null);
         }
     }
     //3、订阅方法
-
-//    public void showData(MediaItem mediaItem) {
-////        发消息开始歌词同步
-//        showLyric();
-//        showViewData();
-//        checkPlaymode();
-//    }
-    public void onEventMainThread(MediaItem mediaItem) {
+    @Subscribe(threadMode = ThreadMode.MAIN,sticky = false,priority = 0)
+    public void showData(MediaItem mediaItem) {
+//        发消息开始歌词同步
         showLyric();
         showViewData();
         checkPlaymode();
     }
-//    @Subscribe(threadMode = ThreadMode.MAIN,sticky = false,priority = 0)
-//    public void onEventMainThread(MediaItem mediaItem){
-////        发消息开始歌词同步
-//
-//        showLyric();
-//        showViewData();
-//        checkPlaymode();
-//    }
+
+
+    public void onEventMainThread(MediaItem mediaItem){
+//        发消息开始歌词同步
+
+        showLyric();
+        showViewData();
+        checkPlaymode();
+    }
 
 
     private void showLyric() {
@@ -410,6 +411,7 @@ public class AudioPlayerAcivity extends Activity implements View.OnClickListener
         } catch (RemoteException e) {
             e.printStackTrace();
          }
+
         if(lyricUtils.isExistsLyric()){
             mHandler.sendEmptyMessage(SHOW_LYRIC);
 
@@ -453,12 +455,12 @@ public class AudioPlayerAcivity extends Activity implements View.OnClickListener
     protected void onDestroy() {
         mHandler.removeCallbacksAndMessages(null);
 //        取消注册广播
-        if(mReceiver!=null){
-            unregisterReceiver(mReceiver);
-            mReceiver=null;
-        }
-//        //2、EvenBus取消注册
-//        EventBus.getDefault().unregister(this);
+//        if(mReceiver!=null){
+//            unregisterReceiver(mReceiver);
+//            mReceiver=null;
+//        }
+        //2、EvenBus取消注册
+        EventBus.getDefault().unregister(this);
 
         //解绑服务
         if(conn!=null){
@@ -466,5 +468,10 @@ public class AudioPlayerAcivity extends Activity implements View.OnClickListener
             conn=null;
         }
         super.onDestroy();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
     }
 }

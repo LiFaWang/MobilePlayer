@@ -92,7 +92,7 @@ public class ShowLyricView extends android.support.v7.widget.AppCompatTextView {
         //设置居中
         whitePaint.setTextAlign(Paint.Align.CENTER);
 //        lyrics=new ArrayList<>();
-//        Lyric lyric=new Lyric();
+//
 //        for(int i=0 ;i<1000;i++){
 //            Lyric lyric=new Lyric();
 //            lyric.setTimePoint(1000*i);
@@ -110,13 +110,13 @@ public class ShowLyricView extends android.support.v7.widget.AppCompatTextView {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
         if (lyrics!=null&&lyrics.size()>0){
-            //往上推移
-            float plush=0;
+//            往上推移
+            float plush;
             if(sleepTime==0){
                 plush=0;
             }else {
                 //平移
-             //   float delta=((currentPsoition-timePiont)/sleepTime)*textHeight;
+//                float delta=((currentPsoition-timePiont)/sleepTime)*textHeight;
                 plush=textHeight+((currentPosition-timePoint)/sleepTime)*textHeight;
             }
             canvas.translate(0,-plush);

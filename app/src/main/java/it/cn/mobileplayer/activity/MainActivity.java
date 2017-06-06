@@ -8,6 +8,7 @@ import android.os.Handler;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v4.content.ContextCompat;
 import android.view.KeyEvent;
 import android.widget.RadioGroup;
 import android.widget.Toast;
@@ -23,6 +24,7 @@ import it.cn.mobileplayer.pager.NetVideoPager;
 import it.cn.mobileplayer.pager.VideoPager;
 
 /**
+ *
  * Created by Administrator on 2016/12/7.
  */
 public  class MainActivity extends FragmentActivity {
@@ -46,12 +48,11 @@ public  class MainActivity extends FragmentActivity {
 
     @SuppressLint("NewApi")
     private void requestReadExternalPermission() {
-        if (checkSelfPermission(Manifest.permission.READ_EXTERNAL_STORAGE)
+        if (ContextCompat.checkSelfPermission(this,Manifest.permission.READ_EXTERNAL_STORAGE)
                 != PackageManager.PERMISSION_GRANTED) {
 //            Log.d(TAG, "READ permission IS NOT granted...");
 
             if (shouldShowRequestPermissionRationale(Manifest.permission.READ_EXTERNAL_STORAGE)) {
-
 //                Log.d(TAG, "11111111111111");
             } else {
                 // 0 是自己定义的请求coude
@@ -129,7 +130,12 @@ public  class MainActivity extends FragmentActivity {
     }
 
     public BasePager getBasePager() {
-        requestReadExternalPermission();
+//        requestReadExternalPermission();
+        mBasePagers = new ArrayList<>();
+        mBasePagers.add(new VideoPager(this));
+        mBasePagers.add(new AudioPager(this));
+        mBasePagers.add(new NetVideoPager(this));
+        mBasePagers.add(new NetAudioPager(this));
         BasePager basePager = null;
         if (mBasePagers != null && mBasePagers.size()!=0)
             basePager=mBasePagers.get(position);
