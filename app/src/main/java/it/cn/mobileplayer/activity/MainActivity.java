@@ -130,7 +130,7 @@ public  class MainActivity extends FragmentActivity {
     }
 
     public BasePager getBasePager() {
-//        requestReadExternalPermission();
+        requestReadExternalPermission();
         mBasePagers = new ArrayList<>();
         mBasePagers.add(new VideoPager(this));
         mBasePagers.add(new AudioPager(this));
