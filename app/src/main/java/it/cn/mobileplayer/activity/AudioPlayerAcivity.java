@@ -12,6 +12,7 @@ import android.os.Handler;
 import android.os.IBinder;
 import android.os.Message;
 import android.os.RemoteException;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -35,7 +36,6 @@ import it.cn.mobileplayer.view.ShowLyricView;
 
 
 /**
- *
  * Created by Administrator on 2016/12/22.
  */
 
@@ -62,8 +62,7 @@ public class AudioPlayerAcivity extends Activity implements View.OnClickListener
     private MyReceiver mReceiver;
     private Utils mUtils;
     private boolean notification;
-    private  AnimationDrawable animationDrawable;
-
+    private AnimationDrawable animationDrawable;
 
 
     /**
@@ -88,7 +87,6 @@ public class AudioPlayerAcivity extends Activity implements View.OnClickListener
         btnAudioNext = (Button) findViewById(R.id.btn_audio_next);
         btnLyrc = (Button) findViewById(R.id.btn_lyrc);
         showLyricView= (ShowLyricView) findViewById(R.id.showLyricView);
-
         btnAudioPlaymode.setOnClickListener(this);
         btnAudioPre.setOnClickListener(this);
         btnAudioStartPause.setOnClickListener(this);
@@ -98,18 +96,25 @@ public class AudioPlayerAcivity extends Activity implements View.OnClickListener
         seekbarAudio.setOnSeekBarChangeListener(new MyOnSeekBarChangeListener());
 
     }
-    class MyOnSeekBarChangeListener implements SeekBar.OnSeekBarChangeListener{
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        return super.onTouchEvent(event);
+
+    }
+
+    class MyOnSeekBarChangeListener implements SeekBar.OnSeekBarChangeListener {
 
         @Override
         public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-        if(fromUser){
-            //拖动进度
-            try {
-                mService.seekTo(progress);
-            } catch (RemoteException e) {
-                e.printStackTrace();
+            if (fromUser) {
+                //拖动进度
+                try {
+                    mService.seekTo(progress);
+                } catch (RemoteException e) {
+                    e.printStackTrace();
+                }
             }
-        }
         }
 
         @Override
@@ -122,6 +127,7 @@ public class AudioPlayerAcivity extends Activity implements View.OnClickListener
 
         }
     }
+
     /**
      * Handle button click events<br />
      * <br />
@@ -132,31 +138,33 @@ public class AudioPlayerAcivity extends Activity implements View.OnClickListener
     public void onClick(View v) {
 
 
-        if ( v == btnAudioPlaymode ) {
+        if (v == btnAudioPlaymode) {
             // Handle clicks for btnAudioPlaymode
             setPlaymode();
-        } else if ( v == btnAudioPre ) {
+        } else if (v == btnAudioPre) {
             // Handle clicks for btnAudioPre
-            if(mService!=null){
+            if (mService != null) {
                 try {
                     mService.pre();
+
+
                 } catch (RemoteException e) {
                     e.printStackTrace();
                 }
             }
 
-        } else if ( v == btnAudioStartPause ) {
+        } else if (v == btnAudioStartPause) {
             // Handle clicks for btnAudioStartPause
-            if(mService!=null){
+            if (mService != null) {
                 try {
-                    if(mService.isPlaying()){
+                    if (mService.isPlaying()) {
                         //暂停
                         mService.pause();
                         animationDrawable.stop();
 
                         //按钮设置为播放
                         btnAudioStartPause.setBackgroundResource(R.drawable.widget_control_play_hover);
-                    }else {
+                    } else {
                         //播放
                         mService.start();
                         animationDrawable.start();
@@ -169,31 +177,31 @@ public class AudioPlayerAcivity extends Activity implements View.OnClickListener
                     e.printStackTrace();
                 }
             }
-        } else if ( v == btnAudioNext ) {
+        } else if (v == btnAudioNext) {
             // Handle clicks for btnAudioNext
-            if(mService!=null){
+            if (mService != null) {
                 try {
                     mService.next();
                 } catch (RemoteException e) {
                     e.printStackTrace();
                 }
             }
-        } else if ( v == btnLyrc ) {
+        } else if (v == btnLyrc) {
             // Handle clicks for btnLyrc
         }
     }
 
     private void setPlaymode() {
         try {
-            int playmode=mService.getPlayMode();
-            if(playmode==MusicPlayerService.REPEAT_NOMAL){
-                playmode=MusicPlayerService.REPEAT_SINGEL;
-            }else if(playmode==MusicPlayerService.REPEAT_SINGEL){
-                playmode=MusicPlayerService.REPEAT_ALL;
-            }else if(playmode==MusicPlayerService.REPEAT_ALL){
-                playmode=MusicPlayerService.REPEAT_NOMAL;
-            }else {
-             playmode=MusicPlayerService.REPEAT_NOMAL;
+            int playmode = mService.getPlayMode();
+            if (playmode == MusicPlayerService.REPEAT_NOMAL) {
+                playmode = MusicPlayerService.REPEAT_SINGEL;
+            } else if (playmode == MusicPlayerService.REPEAT_SINGEL) {
+                playmode = MusicPlayerService.REPEAT_ALL;
+            } else if (playmode == MusicPlayerService.REPEAT_ALL) {
+                playmode = MusicPlayerService.REPEAT_NOMAL;
+            } else {
+                playmode = MusicPlayerService.REPEAT_NOMAL;
 
             }
             mService.setPlayMode(playmode);
@@ -206,17 +214,17 @@ public class AudioPlayerAcivity extends Activity implements View.OnClickListener
 
     private void showPlaymode() {
         try {
-            int playmode=mService.getPlayMode();
-            if(playmode==MusicPlayerService.REPEAT_NOMAL){
+            int playmode = mService.getPlayMode();
+            if (playmode == MusicPlayerService.REPEAT_NOMAL) {
                 btnAudioPlaymode.setBackgroundResource(R.drawable.btn_audio_playmode_nomal_selector);
                 Toast.makeText(AudioPlayerAcivity.this, "顺序播放", Toast.LENGTH_SHORT).show();
-            }else if(playmode==MusicPlayerService.REPEAT_SINGEL){
+            } else if (playmode == MusicPlayerService.REPEAT_SINGEL) {
                 btnAudioPlaymode.setBackgroundResource(R.drawable.btn_audio_playmode_single_selector);
                 Toast.makeText(AudioPlayerAcivity.this, "单曲循环", Toast.LENGTH_SHORT).show();
-            }else if(playmode==MusicPlayerService.REPEAT_ALL){
+            } else if (playmode == MusicPlayerService.REPEAT_ALL) {
                 btnAudioPlaymode.setBackgroundResource(R.drawable.btn_audio_playmode_all_selector);
                 Toast.makeText(AudioPlayerAcivity.this, "全部循环", Toast.LENGTH_SHORT).show();
-            }else {
+            } else {
                 btnAudioPlaymode.setBackgroundResource(R.drawable.btn_audio_playmode_nomal_selector);
                 Toast.makeText(AudioPlayerAcivity.this, "顺序播放", Toast.LENGTH_SHORT).show();
             }
@@ -232,21 +240,21 @@ public class AudioPlayerAcivity extends Activity implements View.OnClickListener
     private void checkPlaymode() {
 
         try {
-            int playmode=mService.getPlayMode();
-            if(playmode==MusicPlayerService.REPEAT_NOMAL){
+            int playmode = mService.getPlayMode();
+            if (playmode == MusicPlayerService.REPEAT_NOMAL) {
                 btnAudioPlaymode.setBackgroundResource(R.drawable.btn_audio_playmode_nomal_selector);
-            }else if(playmode==MusicPlayerService.REPEAT_SINGEL){
+            } else if (playmode == MusicPlayerService.REPEAT_SINGEL) {
                 btnAudioPlaymode.setBackgroundResource(R.drawable.btn_audio_playmode_single_selector);
-            }else if(playmode==MusicPlayerService.REPEAT_ALL){
+            } else if (playmode == MusicPlayerService.REPEAT_ALL) {
                 btnAudioPlaymode.setBackgroundResource(R.drawable.btn_audio_playmode_all_selector);
-            }else {
+            } else {
                 btnAudioPlaymode.setBackgroundResource(R.drawable.btn_audio_playmode_nomal_selector);
             }
             //校验播放和暂停的按钮
 
-            if(mService.isPlaying()){
+            if (mService.isPlaying()) {
                 btnAudioStartPause.setBackgroundResource(R.drawable.widget_control_play_hover);
-            }else {
+            } else {
                 btnAudioStartPause.setBackgroundResource(R.drawable.widget_control_pause_hover);
 
             }
@@ -255,38 +263,43 @@ public class AudioPlayerAcivity extends Activity implements View.OnClickListener
         }
     }
 
-    private Handler mHandler=new Handler(){
+    private Handler mHandler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
             super.handleMessage(msg);
-            switch (msg.what){
+            switch (msg.what) {
                 case SHOW_LYRIC:
                     //显示歌词
                     //1、得到当前的进度
                     try {
-                        int currentPosition =mService.getCurrentPosition();
+                        int currentPosition = mService.getCurrentPosition();
                         //2、把进度传入ShowLyricView控件，并且计算亮那一句
                         showLyricView.setShowNextLyric(currentPosition);
+//                        mLyricView.setShowNextLyric(currentPosition);
+//                        mLyricCanvasView.setShowNextLyric(currentPosition);
+//                        mLyricshowVIew.setShowNextLyric(currentPosition);
+
                         //3、实时的发消息
                         mHandler.removeMessages(SHOW_LYRIC);
                         mHandler.sendEmptyMessage(SHOW_LYRIC);
 
                     } catch (RemoteException e) {
                         e.printStackTrace();
-                    } break;
+                    }
+                    break;
 
                 case PROGRESS:
 
                     try {
                         //1.得到当前进度
-                        int currentPosition =mService.getCurrentPosition();
+                        int currentPosition = mService.getCurrentPosition();
                         //2.设置seekBar.setProgress
                         seekbarAudio.setProgress(currentPosition);
                         //3.时间进度更新
-                        tvTime.setText(mUtils.stringForTime(currentPosition)+"/"+mUtils.stringForTime(mService.getDuraition()));
+                        tvTime.setText(mUtils.stringForTime(currentPosition) + "/" + mUtils.stringForTime(mService.getDuraition()));
                         //4.每秒更新一次
                         mHandler.removeMessages(PROGRESS);
-                        mHandler.sendEmptyMessageDelayed(PROGRESS,1000);
+                        mHandler.sendEmptyMessageDelayed(PROGRESS, 1000);
                     } catch (RemoteException e) {
                         e.printStackTrace();
                     }
@@ -308,7 +321,7 @@ public class AudioPlayerAcivity extends Activity implements View.OnClickListener
     }
 
     private void initData() {
-        mUtils=new Utils();
+        mUtils = new Utils();
 //        注册广播
 //        mReceiver=new MyReceiver();
 //        IntentFilter intentFilter=new IntentFilter();
@@ -320,7 +333,7 @@ public class AudioPlayerAcivity extends Activity implements View.OnClickListener
     }
 
 
-    private ServiceConnection conn=new ServiceConnection() {
+    private ServiceConnection conn = new ServiceConnection() {
         /**
          * 当链接成功，回调这个方法
          * @param componentName
@@ -328,12 +341,12 @@ public class AudioPlayerAcivity extends Activity implements View.OnClickListener
          */
         @Override
         public void onServiceConnected(ComponentName componentName, IBinder iBinder) {
-            mService=IMyMusicPlayerService.Stub.asInterface(iBinder);
-            if(mService!=null){
+            mService = IMyMusicPlayerService.Stub.asInterface(iBinder);
+            if (mService != null) {
                 try {
-                    if(!notification){
+                    if (!notification) {
                         mService.openAudio(position);
-                    }else {
+                    } else {
                         showViewData();
                     }
 
@@ -344,7 +357,6 @@ public class AudioPlayerAcivity extends Activity implements View.OnClickListener
         }
 
 
-
         /**
          * 当链接断开时回调这个方法
          * @param componentName
@@ -353,9 +365,9 @@ public class AudioPlayerAcivity extends Activity implements View.OnClickListener
         @Override
         public void onServiceDisconnected(ComponentName componentName) {
             try {
-                if(mService!=null){
+                if (mService != null) {
                     mService.stop();
-                    mService=null;
+                    mService = null;
                 }
 
             } catch (RemoteException e) {
@@ -363,16 +375,18 @@ public class AudioPlayerAcivity extends Activity implements View.OnClickListener
             }
         }
     };
+
     class MyReceiver extends BroadcastReceiver {
 
         @Override
         public void onReceive(Context context, Intent intent) {
 
-            showData(null);
+//            showData(null);
         }
     }
+
     //3、订阅方法
-    @Subscribe(threadMode = ThreadMode.MAIN,sticky = false,priority = 0)
+    @Subscribe(threadMode = ThreadMode.MAIN, sticky = false, priority = 0)
     public void showData(MediaItem mediaItem) {
 //        发消息开始歌词同步
         showLyric();
@@ -381,7 +395,7 @@ public class AudioPlayerAcivity extends Activity implements View.OnClickListener
     }
 
 
-    public void onEventMainThread(MediaItem mediaItem){
+    public void onEventMainThread(MediaItem mediaItem) {
 //        发消息开始歌词同步
 
         showLyric();
@@ -392,25 +406,26 @@ public class AudioPlayerAcivity extends Activity implements View.OnClickListener
 
     private void showLyric() {
         //解析歌词
-        LyricUtils lyricUtils =new LyricUtils();
+        LyricUtils lyricUtils = new LyricUtils();
         try {
             String path = mService.getAudioPath();
             //传歌词文件
-            path=path.substring(0,path.lastIndexOf("."));
-            File file=new File(path+".lrc");
-            if(!file.exists()){
-                file=new File(path+".txt");
+            path = path.substring(0, path.lastIndexOf("."));
+            File file = new File(path + ".lrc");
+            if (!file.exists()) {
+                file = new File(path + ".txt");
             }
             lyricUtils.readLyricFile(file);
-            showLyricView.setLyrics(lyricUtils.getLyrics());
-
+             showLyricView.setLyrics(lyricUtils.getLyrics());
+//            mLyricView.setLyrics(lyricUtils.getLyrics());
+//            mLyricshowVIew.setLyrics(lyricUtils.getLyrics());
 
 
         } catch (RemoteException e) {
             e.printStackTrace();
-         }
+        }
 
-        if(lyricUtils.isExistsLyric()){
+        if (lyricUtils.isExistsLyric()) {
             mHandler.sendEmptyMessage(SHOW_LYRIC);
 
         }
@@ -432,9 +447,9 @@ public class AudioPlayerAcivity extends Activity implements View.OnClickListener
     }
 
     private void bindAndStartService() {
-        Intent intent=new Intent(this, MusicPlayerService.class);
+        Intent intent = new Intent(this, MusicPlayerService.class);
         intent.setAction("it.cn.mobileplay_OPENAUDIO");
-        bindService(intent,conn, Context.BIND_AUTO_CREATE);
+        bindService(intent, conn, Context.BIND_AUTO_CREATE);
         startService(intent);// bindAndStartService不会多次实例化服务
     }
 
@@ -443,9 +458,9 @@ public class AudioPlayerAcivity extends Activity implements View.OnClickListener
      */
 
     private void getData() {
-        notification=getIntent().getBooleanExtra("notification",false);
-        if(!notification){
-            position=getIntent().getIntExtra("position",0);
+        notification = getIntent().getBooleanExtra("notification", false);
+        if (!notification) {
+            position = getIntent().getIntExtra("position", 0);
         }
     }
 
@@ -461,9 +476,9 @@ public class AudioPlayerAcivity extends Activity implements View.OnClickListener
         EventBus.getDefault().unregister(this);
 
         //解绑服务
-        if(conn!=null){
+        if (conn != null) {
             unbindService(conn);
-            conn=null;
+            conn = null;
         }
         super.onDestroy();
     }

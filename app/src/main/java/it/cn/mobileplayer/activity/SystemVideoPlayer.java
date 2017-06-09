@@ -897,14 +897,14 @@ public class SystemVideoPlayer extends Activity implements View.OnClickListener 
         lp.screenBrightness=lp.screenBrightness+brightness/255.0f;
         if(lp.screenBrightness>1){
             lp.screenBrightness=1;
-            vibrator=(Vibrator)getSystemService(VIBRATOR_SERVICE);
-            long[] pattern={10,200};
-            vibrator.vibrate(pattern,-1);
-        }else if(lp.screenBrightness<0.2){
-            lp.screenBrightness=(float)0.2;
-            vibrator=(Vibrator)getSystemService(VIBRATOR_SERVICE);
-            long[] pattern={10,200};
-            vibrator.vibrate(pattern,-1);
+//            vibrator=(Vibrator)getSystemService(VIBRATOR_SERVICE);
+//            long[] pattern={10,200};
+//            vibrator.vibrate(pattern,-1);
+        }else if(lp.screenBrightness<0){
+            lp.screenBrightness=(float)0;
+//            vibrator=(Vibrator)getSystemService(VIBRATOR_SERVICE);
+//            long[] pattern={10,200};
+//            vibrator.vibrate(pattern,-1);
         }
         getWindow().setAttributes(lp);
 

@@ -80,7 +80,7 @@ public class ShowLyricView extends android.support.v7.widget.AppCompatTextView {
         //创建画笔
         paint=new Paint();
         paint.setColor(Color.GREEN);
-        paint.setTextSize(DensityUtil.dip2px(context,16));
+        paint.setTextSize(DensityUtil.dip2px(context,18));
         paint.setAntiAlias(true);
         //设置居中
         paint.setTextAlign(Paint.Align.CENTER);
@@ -129,7 +129,7 @@ public class ShowLyricView extends android.support.v7.widget.AppCompatTextView {
                 //每一句歌词
                 String preContent=lyrics.get(i).getContent();
                 tempY=tempY-textHeight;
-                if(tempY<0){
+                if(tempY<70){
                     break;
                 }
                 canvas.drawText(preContent,width/2,tempY,whitePaint);
@@ -174,7 +174,6 @@ public class ShowLyricView extends android.support.v7.widget.AppCompatTextView {
                         index=tempIndex;
                         sleepTime=lyrics.get(index).getSleepTime();
                         timePoint=lyrics.get(index).getTimePoint();
-
                     }
             }
         }

@@ -217,7 +217,7 @@ public class MusicPlayerService extends Service {
         if(mMediaItems!=null&&mMediaItems.size()>0){
           mediaItem =mMediaItems.get(position);
         if (mMediaPlayer!=null){
-            //  mMediaPlayer.release();
+//              mMediaPlayer.release();
             mMediaPlayer.reset();
         }
             try {
@@ -269,6 +269,7 @@ public class MusicPlayerService extends Service {
             //通知activity获取广播
 //            notifyChange(OPENAUDIO);
             EventBus.getDefault().post(mediaItem);
+
             start();
         }
     }
